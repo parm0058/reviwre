@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My app</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            line-height: 1.7;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .container {
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            background-color: lightcoral;
+            position: relative;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            /* display: none; */
+            opacity: 0;
+            transform: translateY(-200%);
+            transition: all 0.5s linear;
+        }
+
+        .active {
+            /* display: block; */
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #HomePage{
+            display: flex;
+            align-content:center;
+            width: 100vw;
+            background-color: blue;
+            color: #333;
+            
+           }
+
+        #DeatilsPage {
+            display: flex;
+            align-content:center;
+            width: 100vw;
+            background-color: blue;
+            color: #333;
+            
+        }
+
+        #AddPage {
+            background-color: blueviolet;
+            color: chartreuse;
+        }
+
+        button {
+            color:black;
+        
+
+           
+        }
+            
+        
+    </style>
+
+</head>
+
+<body>
+    <main class="container">
+        <section class="page" id="DeatilsPage">
+            <button data-target="HomePage">Home Page</button>
+            
+        </section>
+
+        <section class="page" id="HomePage">
+            <button data-target="AddPage">Deatils Page</button>
+            <div class="backButtonDiv">
+                <img id="back-button" alt="Back Button" title="Back" class="iconic iconic-md"  data-src="img/media-step-backward-md.svg" />
+            </div>
+        </section>
+
+        <section class="page" id="AddPage">
+            <button data-target="DeatilsPage">Add Page</button>
+            <div class="backButtonDiv">
+                <img id="back-button" alt="Back Button" title="Back" class="iconic iconic-md"  data-src="img/media-step-backward-md.svg" />
+            <div>
+            
+            <p><img src="img/logo.png" alt="image" id="photo" /></p>
+            <p><button id="btn">Take Picture</button></p>
+            <p id="msg"></p>
+        </div>
+            <button type="button" >Submit</button>
+            </div>
+        </section>
+
+    </main>
+
+       <script type="text/javascript" src="cordova.js"></script>
+       <script type="text/javascript" src="js/index.js"></script>
+       
+        
+
+</body>
+
+</html>
