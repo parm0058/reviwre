@@ -1,4 +1,7 @@
-* {
+/*Icons made by <a href="https://www.flaticon.com/authors/hanan" title="Hanan">Hanan</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>*/
+
+
+{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -16,6 +19,7 @@
             overflow-x: hidden;
             background-color: lightcoral;
             position: relative;
+            text-align: center;
         }
 
         .page {
@@ -36,11 +40,15 @@
         }
 
         #HomePage{
-            background-color: rebeccapurple;
-            color: #f1f1f1;
-        }
+/*            display: none;*/
+            align-content:center;
+            width: 100vw;
+            height: 100vh;
+            color: #333;
+            
+           }
 
-        #DeatilsPage {
+        #DetailsPage {
             display: flex;
             align-content:center;
             width: 100vw;
@@ -50,10 +58,35 @@
         }
 
         #AddPage {
-            background-color: blueviolet;
-            color: chartreuse;
+            height: 100vh;
+            color: black;
         }
 
         button {
             color:black;
-        }
+         }
+#photo{
+    height: 100px;
+    
+}
+.heena{
+    display: none;
+}
+#fab-button{
+   
+    background: url(../img/add.png);
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    background-repeat: no-repeat;
+    background-position: center,center;
+    background-size: 50%,50%;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    background-color:darkturquoise;
+    cursor: pointer;
+    
+}
+       
+    

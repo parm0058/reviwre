@@ -5,99 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
     <title>My app</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            font-size: 16px;
-            line-height: 1.7;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        .container {
-            min-height: 100vh;
-            width: 100vw;
-            overflow-x: hidden;
-            background-color: lightcoral;
-            position: relative;
-        }
-
-        .page {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            /* display: none; */
-            opacity: 0;
-            transform: translateY(-200%);
-            transition: all 0.5s linear;
-        }
-
-        .active {
-            /* display: block; */
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        #HomePage{
-            display: flex;
-            align-content:center;
-            width: 100vw;
-            background-color: blue;
-            color: #333;
-            
-           }
-
-        #DeatilsPage {
-            display: flex;
-            align-content:center;
-            width: 100vw;
-            background-color: blue;
-            color: #333;
-            
-        }
-
-        #AddPage {
-            background-color: blueviolet;
-            color: chartreuse;
-        }
-
-        button {
-            color:black;
-        
-
-           
-        }
-            
-        
-    </style>
-
+    
 </head>
 
 <body>
     <main class="container">
-        <section class="page" id="DeatilsPage">
-            <button data-target="HomePage">Home Page</button>
+        <section class="page" id="HomePage">
+            <h1>Home Page</h1>
+            <div id="fab-button" class="btn" data-target="AddPage">
+            </div>
+            
         </section>
 
-        <section class="page" id="HomePage">
-            <button data-target="AddPage">Deatils Page</button>
+        <section class="page" id="detailsPage">
+            <h1 >Details Page</h1>
+            <div class="backButtonDiv">
+                <img id="back-button" alt="Back Button" title="Back" class="btn iconic iconic-md"  data-src="img/media-step-backward-md.svg" data-target="HomePage"/ >
+            </div>
         </section>
 
         <section class="page" id="AddPage">
-            <button data-target="DeatilsPage">Add Page</button>
-            <div>
+            <h1>Add Page</h1>
             
             <p><img src="img/logo.png" alt="image" id="photo" /></p>
-            <p><button id="btn">Take Picture</button></p>
+            <p><button id="takePicture">Take Picture</button></p>
             <p id="msg"></p>
-        </div>
-            <button type="button" >Submit</button>
+            <form class="gary heena">
+                <input type="text" placeholder="title" name="title">
+                <input type="text" placeholder="rating" name="rating">
+                <button class="btn" data-target="HomePage"  class="cancel" >Cancel</button>
+                <button  class="btn"  data-target="HomePage" id="save" >Save</button>
+            </form>
+            
+           
         </section>
 
     </main>
@@ -110,3 +52,15 @@
 </body>
 
 </html>
+
+
+
+               
+           
+           
+           
+           
+           
+           
+           
+            
